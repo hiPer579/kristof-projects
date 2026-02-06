@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>[KristofLProjects] – Portfolio</title>
+	<style>
+		/* Reset & alapok */
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: Arial, sans-serif;
+		}
+
+		body {
+			background-color: #f9fafb;
+			color: #333;
+			line-height: 1.6;
+		}
+
+		a {
+			text-decoration: none;
+			color: #1d4ed8;
+		}
+
+		a:hover {
+		  text-decoration: underline;
+		}
+
+		/* Header */
+		header {
+			background-color: #fff;
+			box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+			padding: 20px 40px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			position: sticky;
+			top: 0;
+			z-index: 100;
+		}
+
+		header h1 {
+		  font-size: 2rem;
+		  text-align:center;
+		}
+
+		nav a {
+		  margin-left: 20px;
+		  color: #555;
+		  font-weight: 500;
+		}
+
+		nav a:hover {
+		  color: #111;
+		}
+
+		/* Sections */
+		section {
+		  max-width: 900px;
+		  margin: 60px auto;
+		  padding: 0 20px;
+		}
+
+		section h2, section h3, section h4 {
+			margin-bottom: 15px;
+			color: #111;
+		}
+
+		section p {
+			margin-bottom: 15px;
+		}
+
+		/* Hero / About */
+		.hero {
+			text-align: center;
+			padding: 60px 20px;
+		}
+
+		.hero h2 {
+			font-size: 1.8rem;
+			margin-bottom: 20px;
+		}
+
+		.hero p {
+			max-width: 700px;
+			margin: 0 auto 30px auto;
+			color: #555;
+		}
+
+		.hero .buttons a {
+			display: inline-block;
+			margin: 0 10px;
+			padding: 10px 20px;
+			background-color: #1d4ed8;
+			color: white;
+			border-radius: 6px;
+			transition: background 0.3s;
+		}
+
+		.hero .buttons a:hover {
+			background-color: #2563eb;
+		}
+
+		/* Skills */
+		.skills {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+			gap: 15px;
+		}
+
+		.skill-item {
+			background-color: #e5e7eb;
+			padding: 10px;
+			text-align: center;
+			border-radius: 6px;
+			font-weight: 500;
+		}
+
+		/* Projects */
+		.project {
+			background-color: #fff;
+			padding: 20px;
+			border-radius: 8px;
+			box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+			margin-bottom: 20px;
+			transition: box-shadow 0.3s;
+		}
+
+		.project:hover {
+			box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+		}
+
+		/* Contact */
+		.contact p {
+			margin-bottom: 10px;
+		}
+
+		footer {
+			background-color: #f3f4f6;
+			text-align: center;
+			padding: 20px;
+			margin-top: 60px;
+			font-size: 0.9rem;
+			color: #555;
+		}
+		@keyframes slideInLeft {
+		from {
+			transform: translateX(-40px);
+			opacity: 0;
+		}
+		to {
+			transform: translateX(0);
+			opacity: 1;
+		}
+		}
+
+		.header-subtitle {
+			font-size: 0.9rem;
+			color: #666;
+			margin-top: 4px;
+			opacity: 0;
+			animation: slideInLeft 0.8s ease-out forwards;
+			animation-delay: 0.2s;
+		}
+	</style>
+</head>
+<body>
+
+	  <!-- Header -->
+		<!-- Header -->
+		<header>
+			<div>
+			<h1>KristofLProjects</h1>
+				<p class="header-subtitle">
+					Interaktív megoldások modern technológiára alapozva
+				</p>
+			</div>
+
+			<nav>
+				<a href="#about">Rólam</a>
+				<a href="#projects">Projektek</a>
+				<a href="#contact">Kapcsolat</a>
+			</nav>
+		</header>
+
+	  <!-- Hero / About -->
+		<section id="about" class="hero">
+		<h2>Backend & Cloud Engineer</h2>
+		<p>Mérnökinformatikus hallgató és Python backend fejlesztő, erős tapasztalattal FastAPI, Pydantic, Docker és Google Cloud Platform használatában. Önálló munkavégzésre alkalmas contractor környezetben.</p>
+
+		<div class="buttons">
+			<a href="#projects">Projektek</a>
+			<a href="#contact">Kapcsolat</a>
+		</div>
+
+		</section>
+
+	  <!-- Skills -->
+	<!-- Skills -->
+	<section id="skills">
+		<h3>Technológiák & Eszközök</h3>
+
+		<h4>Frontend</h4>
+		<div class="skills">
+			<div class="skill-item">HTML5</div>
+			<div class="skill-item">CSS</div>
+			<div class="skill-item">JavaScript</div>
+			<div class="skill-item">Pyodide</div>
+			<div class="skill-item">Brython</div>
+			<div class="skill-item">WebAssembly</div>
+		</div>
+		
+	<p style="margin-top: 15px; color: #555;">
+		Frontend oldalon interaktív webes alkalmazások fejlesztéséhez rendszeresen használok
+		<strong>böngészőben futó Python-megoldásokat</strong>, mint a <strong>Brython</strong> és a
+		<strong>Pyodide</strong>, valamint <strong>WebAssembly</strong>-alapú integrációkat.
+		Ezek lehetővé teszik, hogy a Python nyelv erősségeit közvetlenül a kliensoldalon aknázzam ki,
+		különösen olyan esetekben, ahol összetettebb logika vagy nyelvfeldolgozás szükséges.
+		Több projektem során – például egy <em>Abstract Syntax Tree</em>-re épülő megoldásnál –
+		nélkülözhetetlen volt egy könnyűsúlyú, de teljes értékű Python nyelvi értelmező
+	  integrálása a böngészőbe.
+	</p>
+
+		<h4 style="margin-top: 30px;">Backend</h4>
+		<div class="skills">
+			<div class="skill-item">Django</div>
+			<div class="skill-item">Flask</div>
+			<div class="skill-item">FastAPI</div>
+			<div class="skill-item">PHP</div>
+			<div class="skill-item">SQLite</div>
+			<div class="skill-item">MySQL</div>
+		</div>
+	  
+		<p style="margin-top: 15px; color: #555;">
+			Backend oldalon több különböző technológiai stackkel dolgoztam, amelyekre építve
+			<strong>alap szinten képes vagyok backend alkalmazásokat cloud környezetbe deployolni</strong>.
+			Tapasztalatom van szolgáltatások konténerizálásában, egyszerű CI/CD folyamatok használatában,
+			valamint abban, hogy az alkalmazások működőképesek legyenek modern felhőalapú infrastruktúrán
+			a fenti technológiákra támaszkodva.
+		</p>
+
+		<h4 style="margin-top: 30px;">Egyéb</h4>
+		<div class="skills">
+			<div class="skill-item">pybind11</div>
+			<div class="skill-item">Kivy</div>
+			<div class="skill-item">Selenium</div>
+		</div>
+
+		<p style="margin-top: 15px; color: #555;">
+			Az „Egyéb” kategóriába olyan eszközök tartoznak, amelyekkel összetettebb, nem mindennapi problémákat oldok meg.
+			Ilyen például a <strong>Python és C++ közötti integráció</strong> teljesítménykritikus feladatok esetén
+			<strong>pybind11</strong> segítségével, grafikus alkalmazások fejlesztése <strong>Kivy</strong>-vel,
+			valamint automatizált böngészőalapú tesztelés és adatgyűjtés <strong>Selenium</strong> használatával.
+		</p>
+	</section>
+	
+<!-- Internship / International Experience -->
+<section id="experience">
+  <h3>Szakmai gyakorlat & nemzetközi tapasztalat</h3>
+
+  <div class="project">
+	<h4>Szakmai gyakorlat – Portugália</h4>
+	<p style="font-style: italic; color: #666; margin-bottom: 10px;">
+		CMS alapú weboldal
+	</p>
+	
+	<img src="portugal.jpg" alt="Portugália" style="width:100%; max-width:600px; display:block; margin:15px auto; border-radius:8px;">
+ 
+    <p>
+		Szakmai gyakorlatomat Portugáliában töltöttem, ahol egy helyi zeneiskola számára
+		egy <strong>CMS-alapú weboldalt</strong> fejlesztettem. A projekt célja egy
+		könnyen kezelhető, adminisztrálható felület létrehozása volt, amely támogatja az
+		intézmény mindennapi működését és online megjelenését.
+    </p>
+
+    <p>
+		A fejlesztés során webes backend és frontend feladatokat egyaránt elláttam,
+		különös figyelmet fordítva az átlátható struktúrára és a gyakorlati használhatóságra.
+		A projekt lehetőséget adott arra, hogy valós megrendelői igények alapján,
+		önállóan tervezzek és valósítsak meg egy komplett rendszert.
+    </p>
+
+    <p>
+		A szakmai gyakorlat mellett a kinti tanulmányaim során aktívan foglalkoztam
+		<strong>cloud-alapú alkalmazásfejlesztéssel</strong>, ahol backend szolgáltatások
+		felhőben történő futtatásával, konténerizálással és modern deploy szemlélettel
+		szereztem tapasztalatot. Ez a kettősség – valós webes projekt és cloud fókuszú
+		tanulmányok – jelentősen hozzájárult a gyakorlati tudásom elmélyítéséhez.
+    </p>
+  </div>
+</section>
+
+  <!-- Projects -->
+	<section id="projects">
+		<h3>Projektek</h3>
+
+		<div class="project">
+			<h4>EasyEvaluation – Excel-képlet kiértékelő</h4>
+			<p>Python és C++ alapú backend rendszer, Django webes felülettel. Saját algoritmus a képletek kiértékelésére, tokenizálás és szintaxisfa építés. Oktatási célú, drag-and-drop felület.</p>
+		</div>
+
+		<div class="project">
+			<h4>Cloud-native Backend API</h4>
+			<p>FastAPI és Pydantic stack, REST API tervezés és implementáció. Dockerizált szolgáltatások, deploy Cloud Runra, Pub/Sub aszinkron feldolgozás, Cloud SQL adatbázis.</p>
+		</div>
+
+		<div class="project">
+			<h4>2D Tilemap Game Engine</h4>
+			<p>Python + Kivy alapú játék motor. Zajgenerált pályák, sprite-kezelés, minimap, canvas rétegkezelés.</p>
+		</div>
+
+	</section>
+
+	  <!-- Contact -->
+	<section id="contact" class="contact">
+		<h3>Kapcsolat</h3>
+		<p>Email: <a href="mailto:email@pelda.com">email@pelda.com</a></p>
+		<p>LinkedIn: <a href="#">linkedin.com/in/username</a></p>
+		<p>GitHub: <a href="#">github.com/username</a></p>
+	</section>
+
+	<footer>
+		&copy; 2026 [Neved]. Minden jog fenntartva.
+	</footer>
+
+</body>
+</html>
